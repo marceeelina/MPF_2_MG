@@ -13,11 +13,11 @@ def calfp(frates, fac_rate):
 
     # Weight Factors
     wt_factors = [
-        [3, 4, 6],
-        [4, 5, 7],
-        [3, 4, 6],
-        [7, 10, 15],
-        [5, 7, 10]
+        [3, 4, 6],       # EI
+        [4, 5, 7],       # EO
+        [3, 4, 6],       # EQ
+        [7, 10, 15],     # ILF
+        [5, 7, 10]       # EIF
     ]
 
     ufp = 0
@@ -66,15 +66,16 @@ def calfp(frates, fac_rate):
     print(f"Function Points (FP) : {fp:.2f}")
 
 
-# Główna funkcja (odpowiednik int main())
+# Główna funkcja z odpowiednio dobranymi wartościami
 if __name__ == "__main__":
     frates = [
-        [0, 1, 0],
-        [0, 1, 0],  # zmiana wartosci
-        [0, 3, 0],
-        [0, 1, 0],
-        [0, 3, 0]
+        [0, 0, 0], 
+        [0, 2, 0],
+        [1, 0, 0],  
+        [0, 0, 10],
+        [0, 0, 3] 
     ]
+
 
     fac_rate = 2
 
